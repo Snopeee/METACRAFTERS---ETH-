@@ -1,0 +1,14 @@
+pragma solidity ^0.8.0;
+
+contract LoopExample {
+    uint256 public result;
+    
+    function runLoop() public {
+        uint256 num1 = 10;
+        uint256 num2 = 5;
+        
+        for (uint256 i = 0; i < 1000; i++) {
+            result = num1 * num2;
+        }
+    }
+}

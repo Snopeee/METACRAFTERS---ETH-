@@ -1,0 +1,25 @@
+pragma solidity ^0.8.0;
+
+contract LoopExample {
+    uint256 public result;
+    
+    function runLoop() public {
+        uint256 n = 10;
+        uint256 fib1 = 0;
+        uint256 fib2 = 1;
+        
+        for (uint256 i = 0; i < 100; i++) {
+            if (n == 0) {
+                result = 0;
+            } else if (n == 1) {
+                result = 1;
+            } else {
+                for (uint256 j = 2; j <= n; j++) {
+                    result = fib1 + fib2;
+                    fib1 = fib2;
+                    fib2 = result;
+                }
+            }
+        }
+    }
+}
